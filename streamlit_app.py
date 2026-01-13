@@ -39,4 +39,4 @@ og_dataset = session.table("smoothies.public.orders")
 
 import requests
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-st.text(smoothiefroot_response.json()
+st.text(smoothiefroot_response.json())
