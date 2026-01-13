@@ -32,7 +32,7 @@ if ingredients_list:
         .filter(col("FRUIT_NAME") == fruit_chosen) \
         .select(col("SEARCH_ON")) \
         .collect()[0][0]
-      smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/"+fruit_chosen)
+      smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/"+search_on_value)
       sf_df=st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
 
     st.write (ingredients_string)
